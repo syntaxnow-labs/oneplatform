@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/admin-panel"
+    },
+    {
+      "path": "./apps/shared-ui"
+    },
+    {
+      "path": "./lib/shared-components"
+    }
+  ]
+}

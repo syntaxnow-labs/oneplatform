@@ -10,7 +10,7 @@
       "path": "./apps/shared-ui"
     },
     {
-      "path": "./lib/shared-components"
+      "path": "./libs/shared-components"
     }
   ]
 }

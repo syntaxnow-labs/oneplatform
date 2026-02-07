@@ -42,6 +42,6 @@
   },
   "workspaces": [
     "apps/*",
-    "lib/*"
+    "libs/*"
   ]
 }

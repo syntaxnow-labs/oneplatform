@@ -1,6 +1,8 @@
 // Uncomment this line to use CSS modules
 // import styles from './app.module.css';
-import NxWelcome from "../../../shared-ui/src/lib/nx-welcome";
+// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+import { NxWelcome,Button,OneplatformSharedComponents } from "@oneplatform/shared-components";
 
 
 import { Route, Routes, Link } from 'react-router-dom';
@@ -9,6 +11,7 @@ export function App() {
   return (
     <div>
       <NxWelcome title="@oneplatform/admin-panel"/>
+      <OneplatformSharedComponents />
     
     {/* START: routes */}
     {/* These routes and navigation have been generated for you */}
@@ -17,10 +20,7 @@ export function App() {
     <hr/>
     <br/>
     <div role="navigation">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/page-2">Page 2</Link></li>
-      </ul>
+      
     </div>
     <Routes>
       <Route
@@ -43,5 +43,3 @@ export function App() {
 }
 
 export default App;
-
-

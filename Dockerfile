@@ -1,38 +1,30 @@
-# ---------------------------
-# Build Stage
-# ---------------------------
+# ============================================
+# Stage 1 — Build Nx App
+# ============================================
 FROM node:24-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-COPY yarn.lock ./
+COPY package.json yarn.lock ./
 
-# Install deps
 RUN corepack enable && yarn install --frozen-lockfile
 
-# Copy source code
 COPY . .
 
-# Build production bundle
-RUN yarn build
+# Build the app
+RUN npx nx build admin-panel
 
 
-
-# ---------------------------
-# 2Production Stage (Nginx)
-# ---------------------------
+# ============================================
+# Stage 2 — Serve with Nginx
+# ============================================
 FROM nginx:stable-alpine AS runner
 
-# Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy built dist folder from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/apps/admin-panel/dist /usr/share/nginx/html
 
-# Copy custom nginx config (optional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

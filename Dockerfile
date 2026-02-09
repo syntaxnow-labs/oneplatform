@@ -20,7 +20,7 @@ FROM nginx:stable-alpine AS runner
 
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /app/apps/admin-panel/dist /usr/share/nginx/html
+COPY --from=builder /apps/sky-ledger-ui/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

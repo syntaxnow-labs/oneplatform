@@ -1,0 +1,7 @@
+/* Import all global styles in order */
+@import './reset.css';
+@import './variables.css';
+@import './globals.css';
+
+/* Export for TypeScript/JavaScript imports */
+export {};

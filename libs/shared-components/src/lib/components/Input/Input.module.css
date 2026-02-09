@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.required {
+  color: #f56565;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2d3748;
+  background-color: #fff;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input::placeholder {
+  color: #a0aec0;
+}
+
+.input:disabled {
+  background-color: #f7fafc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* With icons */
+.hasLeftIcon .input {
+  padding-left: 2.75rem;
+}
+
+.hasRightIcon .input {
+  padding-right: 2.75rem;
+}
+
+.leftIcon,
+.rightIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+  pointer-events: none;
+}
+
+.leftIcon {
+  left: 0.75rem;
+}
+
+.rightIcon {
+  right: 0.75rem;
+}
+
+/* Error state */
+.error .input {
+  border-color: #f56565;
+}
+
+.error .input:focus {
+  border-color: #f56565;
+  box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.errorText {
+  font-size: 0.875rem;
+  color: #f56565;
+  margin-top: -0.25rem;
+}
+
+.helperText {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: -0.25rem;
+}

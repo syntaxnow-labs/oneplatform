@@ -1,0 +1,4 @@
+/* Button.module.css */
+.button {
+  background: var(--color-primary-500); /* ✅ CORRECT */
+}

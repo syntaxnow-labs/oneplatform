@@ -11,6 +11,9 @@
     },
     {
       "path": "./libs/shared-components"
+    },
+    {
+      "path": "./sky-ledger-ui"
     }
   ]
 }

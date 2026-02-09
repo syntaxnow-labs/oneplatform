@@ -42,6 +42,7 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/*"
+    "libs/*",
+    "sky-ledger-ui"
   ]
 }

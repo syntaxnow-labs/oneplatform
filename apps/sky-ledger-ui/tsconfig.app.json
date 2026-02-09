@@ -32,11 +32,10 @@
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx"
-,
-],
-"references": [
-  {
-    "path": "../../libs/shared-components/tsconfig.lib.json"
-  }
-]
+  ],
+  "references": [
+    {
+      "path": "../../libs/shared-components/tsconfig.lib.json"
+    }
+  ]
 }

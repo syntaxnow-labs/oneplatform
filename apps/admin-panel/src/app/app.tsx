@@ -10,7 +10,7 @@ import '@oneplatform/shared-components/styles';
 
 export function App() {
 
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState('');
   const handleLogin = async (email: string, password: string) => {
     try {
